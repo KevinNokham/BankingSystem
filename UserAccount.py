@@ -16,7 +16,7 @@ class UserAccount:
     def depositAmount(self):
         #!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!
         #While this function is running, continuously prompt the user to enter in a valid value.
-        #The input should be able to be converted into a positive 2-point decimal number that is is non-negative, or 0 if they want to return to the main menu
+        #The input should be able to be converted into a positive 2-point decimal number that is non-negative, or 0 if they want to return to the main menu
         #If a number such as -10 or 10.001 was given, you should inform the user that the number doesn't fit the format
 
         #EXAMPLES
@@ -30,7 +30,7 @@ class UserAccount:
     def withdrawAmount(self):
         #!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!
         #While this function is running, continuously prompt the user to enter in a valid value.
-        #The input should be able to be converted into a positive 2-point decimal number that is is non-negative, or 0 if they want to return to the main menu
+        #The input should be able to be converted into a positive 2-point decimal number that is non-negative, or 0 if they want to return to the main menu
         #If a number such as -10 or 10.001 was given, you should inform the user that the number doesn't fit the format
         #The function should also check after user input that the user has enough money in their accountBalance i.e. [self.accountBalance - amountToWithdraw < 0]
         #If they lack the money to make the withdraw, ask them to enter a smaller amount
@@ -109,7 +109,6 @@ def newAccountCreation():
     listOfUsers.append(UserAccount(newUsername,newPassword, newFavoriteColor))
 
 def loginProcess():
-    global listOfUsers
     #USERNAME MATCHING
     #!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!
     #If listOfUsers is empty, there's no point in trying to login. If this function is called and the list is empty, tell the user and terminate the process.
@@ -124,7 +123,6 @@ def loginProcess():
     #If their input is correct, then call the mainMenu() function of their class instance
 
 def mainPasswordRecovery():
-    global listOfUsers
     #PASSWORD RECOVERY
     #!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!
     #If listOfUsers is empty, there's no point in trying to recover passwords. If this function is called and the list is empty, tell the user and terminate the process.
@@ -186,7 +184,7 @@ def main():
                 print("Invalid input. Reprinting main menu.")
                 break
 
-"""For debugging purposes, adds a user named Billy Bob with the password 4444 and color "purple
+"""For debugging purposes, adds a user named Billy Bob with the password 4444 and color "purple"
 listOfUsers.append(UserAccount("Billy Bob", 4444, "purple"))"""
 
 #Run the program and pray it works
