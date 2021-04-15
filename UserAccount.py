@@ -109,6 +109,7 @@ def newAccountCreation():
     listOfUsers.append(UserAccount(newUsername,newPassword, newFavoriteColor))
 
 def loginProcess():
+    global listOfUsers
     #USERNAME MATCHING
     #!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!
     #If listOfUsers is empty, there's no point in trying to login. If this function is called and the list is empty, tell the user and terminate the process.
@@ -123,6 +124,7 @@ def loginProcess():
     #If their input is correct, then call the mainMenu() function of their class instance
 
 def mainPasswordRecovery():
+    global listOfUsers
     #PASSWORD RECOVERY
     #!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!
     #If listOfUsers is empty, there's no point in trying to recover passwords. If this function is called and the list is empty, tell the user and terminate the process.
