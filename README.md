@@ -8,9 +8,9 @@ not grant the right to redistribute the code in any way, shape, or form.
 There is no license on this repository, so failure to adhere to these
 rules could result in actual legal action. Please don't be dumb.
 
-1.	Moeed Ahmad – mahmad19@student.gsu.edu
-2.	Steven Cucciniello – scucciniello1@stugent.gsu.edu
-3.	Xue Guo – xguo12@student.gsu.edu
-4.	Giulianna Lanz - glanz1@student.gsu.edu
-5.	Kevin Nokham – knokham1@student.gsu.edu
-6.	Evan Smith – esmith178@student.gsu.edu
+1.	Moeed Ahmad
+2.	Steven Cucciniello
+3.	Xue Guo
+4.	Giulianna Lanz
+5.	Kevin Nokham
+6.	Evan Smith
