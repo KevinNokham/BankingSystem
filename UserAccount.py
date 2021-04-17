@@ -44,12 +44,34 @@ class UserAccount:
         #Input djodgjpa Output:"Invalid input. Please make sure you entered a valid number." and prompt the user again
 
     def passwordRecovery(self):
-        #!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!
         #While this function is running, the user gets 3 attempts to recover their password
         #The user should be reminded what the list of valid colors are
         #The user will need to have their input converted to lowercase as case should not matter - "Pink" should be considered "pink"
         #Each time they input a wrong answer, inform them that they have 1 less attempt i.e. "Wrong color. You have 2 attempts left."
         #If all 3 attempts are used and no correct color was given, inform the user and terminate the process.
+
+        print("Beginning password recovery process.")
+
+        #Give the user 3 attempts to input the color they chose during account creation. Also print out the valid list of colors.
+        print("Please enter the color you chose during account creation. You have 3 attempts. The valid list of colors was:",listOfColors)
+
+        #Cycle through 3 attempts.
+        for x in range(1, 4):
+            userInput = input("You entered: ")
+            userInput = userInput.lower()
+
+            #If the user gives the correct color, print their password and terminate password recovery
+            if userInput == self.favoriteColor:
+                print("Your password is:",self.password)
+                return
+            
+            #Otherwise, inform them that they have 1 less attempt i.e. "Wrong color. You have 2 attempts left."
+            else:
+                print("Wrong color. You have " + str((3-x)) + " attempts left.")
+
+            #If all 3 attempts are used and no correct color was given, inform the user and terminate the process.
+            if x == 3 and (userInput != self.favoriteColor):
+                print("All attempts have been used. Terminating password recovery.")
 
     #This function serves as the main menu after successful login and will call upon all other functions that modify the user's account
     def mainMenu(self):
@@ -124,13 +146,30 @@ def loginProcess():
     #If their input is correct, then call the mainMenu() function of their class instance
 
 def mainPasswordRecovery():
-    global listOfUsers
     #PASSWORD RECOVERY
-    #!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!NEEDS WORK!!!
     #If listOfUsers is empty, there's no point in trying to recover passwords. If this function is called and the list is empty, tell the user and terminate the process.
     #Otherwise, search through each listOfUsers element for a class instance with a matching username datafield.
     #If a match is found, then call the passwordRecovery() function of their class instance
     #Otherwise, if the end of the list is reached and no match was found, tell the user the entered username was not found and terminate the process.
+    global listOfUsers
+
+    #If the database is empty, there's no point in trying to do a password recovery.
+    if len(listOfUsers) == 0:
+        print("The database is empty. Please create an account first.")
+
+    else:
+        #Prompt user for username
+        attemptedLoginUsername = input("Please enter your username (case sensitive): ")
+
+        #Scan through listOfUsers to find an object with a matching username data field
+        for x in listOfUsers:
+            #If found, begin password recovery
+            if x.username == attemptedLoginUsername:
+                x.passwordRecovery()
+
+            #If the end of the list was reached and there was no match, print the appropriate message
+            elif x == listOfUsers[-1] and x.username != attemptedLoginUsername:
+                print(attemptedLoginUsername + " not found. Terminating process.")
 
 def main():
     global listOfUsers
