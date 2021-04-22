@@ -1,4 +1,4 @@
-# prototype-banking-system
+# banking-system
 For class. Not to be redistributed outside of specified members.
 
 This is the private repository for Group 8, CIS 3260 Section 006. This

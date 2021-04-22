@@ -209,7 +209,6 @@ def newAccountCreation():
 
 def loginProcess():
     global listOfUsers
-
     #USERNAME MATCHING
     #If listOfUsers is empty, there's no point in trying to login. If this function is called and the list is empty, tell the user and terminate the process.
     #Otherwise, search through each listOfUsers element for a class instance with a matching username datafield.
