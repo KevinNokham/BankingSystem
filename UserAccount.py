@@ -61,7 +61,7 @@ class UserAccount:
                 #The below checks that the number they give can be converted into a valid 2-point decimal number and that it's non-negative
                 if (round(amountToWithdraw,2) == amountToWithdraw) and (amountToWithdraw >= 0):
                     if self.accountBalance - amountToWithdraw < 0:
-                        print("You don't have enough in your account to withdraw that amount. Please enter a smaller amount.")
+                        print("You don't have enough in your account to withdraw that amount. Please enter a smaller amount. Enter 0 to return to the main menu: ")
                     else:
                         self.accountBalance -= amountToWithdraw
                         return
